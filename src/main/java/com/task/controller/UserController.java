@@ -27,7 +27,7 @@ public class UserController {
 		return new ResponseEntity<>(response, HttpStatus.valueOf(response.getStatusCode()));
 	}
 
-	@PostMapping("/v1/get/all/users")
+	@GetMapping("/v1/get/all/users")
 	public ResponseEntity<?> getAll() {
 		ResponseDto response = userService.getAllUsers();
 		return new ResponseEntity<>(response, HttpStatus.valueOf(response.getStatusCode()));
